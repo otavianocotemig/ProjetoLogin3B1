@@ -14,6 +14,7 @@ namespace ProjetoLogin3B1
         protected void Page_Load(object sender, EventArgs e)
         {
             lblNomeEmpresa.Text = ConfigurationManager.AppSettings.Get("nomeEmpresa");
+            //
         }
     }
 }
