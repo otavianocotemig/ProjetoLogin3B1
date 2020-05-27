@@ -11,6 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="lblNomeEmpresa" runat="server" Text="nomeEmpresa"></asp:Label>
+            <br />
             <br>
             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
              <asp:TextBox type="email" ID="txtEmail" runat="server"></asp:TextBox>
@@ -19,6 +20,9 @@
              <asp:TextBox type="password" ID="txtPassword" runat="server"></asp:TextBox>
 
             <br />
+
+            <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
 
         </div>
       

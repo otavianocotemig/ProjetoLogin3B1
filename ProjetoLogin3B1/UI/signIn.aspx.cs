@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ProjetoLogin3B1
+namespace ProjetoLogin3B1.UI
 {
     public partial class signIn : System.Web.UI.Page
     {
@@ -15,6 +15,11 @@ namespace ProjetoLogin3B1
         {
             lblNomeEmpresa.Text = ConfigurationManager.AppSettings.Get("nomeEmpresa");
             //
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
