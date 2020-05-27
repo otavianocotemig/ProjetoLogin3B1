@@ -19,7 +19,6 @@
              <asp:TextBox type="password" ID="txtPassword" runat="server"></asp:TextBox>
 
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Button" />
 
         </div>
       
