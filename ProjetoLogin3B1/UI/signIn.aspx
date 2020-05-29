@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signIn.aspx.cs" Inherits="ProjetoLogin3B1.signIn" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signIn.aspx.cs" Inherits="ProjetoLogin3B1.UI.signIn" %>
 
 <!DOCTYPE html>
 
@@ -22,7 +22,10 @@
             <br />
 
             <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            <asp:Button ID="btnEntrar" runat="server" OnClick="Button1_Click" Text="Entrar" Width="171px" />
+
+            <br />
+            <asp:LinkButton ID="btnCadastrar" runat="server">Nâo sou Cadastrado. Clique aqui</asp:LinkButton>
 
         </div>
       
