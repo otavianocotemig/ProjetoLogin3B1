@@ -6,16 +6,15 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Sign In</title>
-    <link href="../Content/bootstrap.css" rel="stylesheet" />
+     <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/signin.css" rel="stylesheet" />
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div class="container">
-            <asp:Label ID="lblNomeEmpresa" runat="server" Text="nomeEmpresa"></asp:Label>
-            <br />
-            <br>
-       </div>
-        <div class="container-fluid">
+<body class="text-center">
+    <form id="form1" class="form-signin" runat="server">
+        
+        <div>
+             <img class="mb-4" src="../IMG/logocotemig.png" alt="" width="120" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Acesso ao Sistema</h1>
 
             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
             <asp:TextBox type="email" ID="txtEmail" class="form-control" runat="server"></asp:TextBox>
@@ -33,13 +32,15 @@
             <br />
 
             <br />
-            <asp:Button ID="btnEntrar" Class="btn btn-lg btn-primary btn-block" runat="server" OnClick="Button1_Click" Text="Entrar" Width="171px" />
+            <asp:Button ID="btnEntrar" Class="btn btn-lg btn-primary btn-block" runat="server" OnClick="Button1_Click" Text="Entrar"  />
 
             <br />
-            <asp:LinkButton ID="btnCadastrar" runat="server">Não sou Cadastrado. Clique aqui</asp:LinkButton>
+            <asp:LinkButton ID="btnCadastrar" class="btn btn-link"  runat="server">Não sou Cadastrado. Clique aqui</asp:LinkButton>
 
         </div>
-      
+      <p class="mt-5 mb-3 text-muted">
+            <asp:Label  ID="lblNomeEmpresa"  runat="server" Text ="nomeEmpresa"></asp:Label>
+          &copy; 2017-2018</p>
     </form>
 </body>
 </html>
