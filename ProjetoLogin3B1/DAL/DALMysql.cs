@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -23,13 +24,14 @@ namespace ProjetoLogin3B1.DAL
                 throw new Exception("Problemas na conexão com o Banco de Dados. " + e.Message);
             }
         }
-
+        // Metodo da classe que não retorna dados do banco de dados - Insert/Delete/Update
         public void executarComando(string sql)
         {
             try
             {
                 Conectar();
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
+                comando.ExecuteNonQuery();
             }
             catch (MySqlException e)
             {
@@ -42,6 +44,25 @@ namespace ProjetoLogin3B1.DAL
 
         }
 
-
+        // Metodo da classe que retorna dados do banco de dados - Select
+        public DataTable ExecutarConsulta(string sql)
+        {
+            try
+            {
+                Conectar();
+                DataTable dt = new DataTable();
+                MySqlDataAdapter dados = new MySqlDataAdapter(sql, conexao);
+                dados.Fill(dt);
+                return dt;
+            }
+            catch (MySqlException e)
+            {
+                throw new Exception("Não foi possível executar a consulta no Banco de Dados. " + e.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }
