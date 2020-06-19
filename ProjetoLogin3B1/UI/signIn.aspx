@@ -16,14 +16,11 @@
              <img class="mb-4" src="../IMG/logocotemig.png" alt="" width="120" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Acesso ao Sistema</h1>
 
+            <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
+            <br />
             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
             <asp:TextBox type="email" ID="txtEmail" class="form-control" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator id="ValidacaoEMail" 
-                ControlToValidate="txtEmail"
-                ErrorMessage="Informe o email"
-                Forecolor="Red"
-                runat="server"/>
-
+           
 
             <br />
              <asp:Label ID="lblPassword"  runat="server" Text="Senha"></asp:Label>
