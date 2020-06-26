@@ -46,5 +46,26 @@ namespace ProjetoLogin3B1.UI
             }
 
         }
+
+        protected void btnEsqueciSenha_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tblClienteDTO cliente = new tblClienteDTO();
+                cliente.Email_cliente = txtEmail.Text;
+                tblClienteBLL clienteBLL = new tblClienteBLL();
+                msgerro.Visible = true;
+                msgerro.Text = clienteBLL.RecuperarSenha(cliente.Email_cliente);
+                txtPassword.Text = clienteBLL.RecuperarSenha(cliente.Email_cliente);
+
+            } catch (Exception ex)
+            {
+                msgerro.Visible = true;
+                msgerro.Text = ex.Message;
+            }
+
+
+
+}
     }
 }

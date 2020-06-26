@@ -87,6 +87,15 @@ namespace ProjetoLogin3B1.UI
         protected global::System.Web.UI.WebControls.LinkButton btnCadastrar;
 
         /// <summary>
+        /// Controle btnEsqueciSenha.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnEsqueciSenha;
+
+        /// <summary>
         /// Controle lblNomeEmpresa.
         /// </summary>
         /// <remarks>
