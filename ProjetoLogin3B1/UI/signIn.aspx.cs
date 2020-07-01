@@ -31,8 +31,11 @@ namespace ProjetoLogin3B1.UI
                 tblClienteBLL bllCliente = new tblClienteBLL();
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
+                    Session["emailUsuario"] = cliente.Email_cliente;
                     msgerro.Visible = true;
-                    msgerro.Text = "Cliente Localizado";
+                    msgerro.Text = "Seja Bem Vindo";
+                    Response.Redirect("FrmMain.aspx");
+
                 }
                 else
                 {

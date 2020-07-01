@@ -178,6 +178,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="UI\FrmMain.aspx" />
     <Content Include="UI\signIn.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -189,6 +190,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\FrmMain.aspx.cs">
+      <DependentUpon>FrmMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMain.aspx.designer.cs">
+      <DependentUpon>FrmMain.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\signIn.aspx.cs">
       <DependentUpon>signIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
