@@ -11,13 +11,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+      <div>
              <img class="mb-4" src="../IMG/logocotemig.png" alt="" width="120" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Menu Principal</h1>
+          <h1 class="h3 mb-3 font-weight-normal">Loja Virtual Cotemig 3B1</h1>
 
             <asp:Label ID="emailUsuario" runat="server" ForeColor="green" Text="." Visible="true"></asp:Label>
             <br />
+           <div class="jumbotron">
+               <p><asp:Button ID="btnMeuPerfil"  class="btn btn-primary btn-lg" runat="server" Text="Meu Perfil" OnClick="btnMeuPerfil_Click" />
+               <asp:Button ID="btnAdministracao"  class="btn btn-primary btn-lg" runat="server" Text="Administração" /></p>
+                      
+    
+           </div>
         </div>
+		
+      
     </form>
 </body>
 </html>

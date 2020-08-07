@@ -19,7 +19,8 @@ namespace ProjetoLogin3B1.BLL
             DataTable dt = daoBanco.ExecutarConsulta(consulta);
             if (dt.Rows.Count == 1)
             {
-                return true;
+               return true;
+                
             }
             else
             {
@@ -41,6 +42,21 @@ namespace ProjetoLogin3B1.BLL
                 return "Usuário não Localizado.";
             }
 
+
+        }
+
+        public string RecuperarTipoUsuario(string email)
+        {
+            string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            DataTable dt = daoBanco.ExecutarConsulta(consulta);
+            if (dt.Rows.Count == 1)
+            {
+                return dt.Rows[0]["tp_usuario"].ToString();
+            }
+            else
+            {
+                return "Usuário não Localizado.";
+            }
 
 
         }

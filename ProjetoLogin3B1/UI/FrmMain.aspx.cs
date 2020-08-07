@@ -14,13 +14,23 @@ namespace ProjetoLogin3B1.UI
             if (Session["emailUsuario"] != null)
             {
                 this.emailUsuario.Text = Session["emailUsuario"].ToString();
+                if (Session["tipoUsuario"].ToString() == "1")
+                {
+                    this.btnAdministracao.Visible = false;
+                }
             }
             else
             {
                 Response.Redirect("signIn.Aspx");
+
             }
 
             
+        }
+
+        protected void btnMeuPerfil_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmMeuPerfil.aspx");
         }
     }
 }

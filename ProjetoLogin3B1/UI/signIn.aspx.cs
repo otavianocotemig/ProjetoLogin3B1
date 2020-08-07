@@ -32,8 +32,10 @@ namespace ProjetoLogin3B1.UI
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
                     Session["emailUsuario"] = cliente.Email_cliente;
+                    Session["tipoUsuario"] = bllCliente.RecuperarTipoUsuario(cliente.Email_cliente);
                     msgerro.Visible = true;
                     msgerro.Text = "Seja Bem Vindo";
+
                     Response.Redirect("FrmMain.aspx");
 
                 }
