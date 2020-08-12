@@ -58,7 +58,19 @@ namespace ProjetoLogin3B1.BLL
                 return "Usuário não Localizado.";
             }
 
+         }
 
+        // Metodo para Listar Clientes pelo Email
+        public DataTable ListarClientes(string email)
+        {
+            string sql = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            return daoBanco.ExecutarConsulta(sql);
+        }
+        // Metodo para Listar Todos os clientes
+        public DataTable ListarClientes()
+        {
+            string sql = string.Format($@"select * from tbl_cliente");
+            return daoBanco.ExecutarConsulta(sql);
         }
     }
 }

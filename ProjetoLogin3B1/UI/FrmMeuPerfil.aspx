@@ -15,13 +15,20 @@
                <h1 class="h3 mb-3 font-weight-normal">Meu Perfil</h1>
              <br />
              <asp:Label  runat="server" Text="Nome"></asp:Label>
-             <asp:TextBox  class="form-control" ID="nomeCliente" runat="server"></asp:TextBox>
-             <asp:Label  runat="server" Text="SobreNome"></asp:Label>
-             <asp:TextBox  class="form-control" ID="sobreNomeCliente" runat="server"></asp:TextBox>
+             <asp:TextBox  class="form-control" ID="txtnomeCliente" runat="server"></asp:TextBox>
+              
+             <br />
+              <asp:Label  runat="server" Text="SobreNome"></asp:Label>
+             <asp:TextBox  class="form-control" ID="txtsobreNomeCliente" runat="server"></asp:TextBox>
+             <br />
             
-             <asp:Label ID="lblPassword"  runat="server" Text="Nova Senha"></asp:Label>
+             <asp:Label ID="Label2"  runat="server" Text="Senha Atual"></asp:Label>
+             <asp:TextBox type="password" class="form-control" ID="txtSenhaAtual" runat="server"></asp:TextBox>
+             <br />
+                                     
+              <asp:Label ID="lblPassword"  runat="server" Text="Nova Senha"></asp:Label>
              <asp:TextBox type="password" class="form-control" ID="txtPassword" runat="server"></asp:TextBox>
-             
+             <br />
              <asp:Label ID="Label1"  runat="server" Text="Repita a Nova Senha"></asp:Label>
              <asp:TextBox type="password" class="form-control" ID="txtRPassword" runat="server"></asp:TextBox>
               
