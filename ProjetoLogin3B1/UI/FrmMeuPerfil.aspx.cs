@@ -18,15 +18,55 @@ namespace ProjetoLogin3B1.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataTable dtResult = bllCliente.ListarClientes(Session["emailUsuario"].ToString());
-            this.txtnomeCliente.Text = dtResult.Rows[0]["nome_cliente"].ToString();
-            this.txtsobreNomeCliente.Text = dtResult.Rows[0]["sobrenome_cliente"].ToString();
+
+            if (IsPostBack == false)
+            {
+                DataTable dtResult = bllCliente.ListarClientes(Session["emailUsuario"].ToString());
+                this.txtnomeCliente.Text = dtResult.Rows[0]["nome_cliente"].ToString();
+                this.txtsobreNomeCliente.Text = dtResult.Rows[0]["sobrenome_cliente"].ToString();
+                this.txtcpf.Text = dtResult.Rows[0]["cpf_cliente"].ToString();
+            }
 
         }
 
         protected void btnRetornar_Click(object sender, EventArgs e)
         {
             Response.Redirect("FrmMain.aspx");
+        }
+
+        protected void btnEntrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Inserindo valores no DTO
+                dtoCliente.Nome_cliente = txtnomeCliente.Text;
+                dtoCliente.Sobrenome_cliente = txtsobreNomeCliente.Text;
+                dtoCliente.Cpf_cliente = txtcpf.Text;
+                dtoCliente.Senha_cliente = txtPassword.Text;
+                dtoCliente.Email_cliente = Session["emailUsuario"].ToString();
+
+                this.msgerro.Visible = false;
+                // Consistencia se a senha atual é igual a senha do banco
+                if (txtSenhaAtual.Text != bllCliente.RecuperarSenha(Session["emailUsuario"].ToString()))
+                {
+                    this.msgerro.Visible = true;
+                    this.msgerro.Text = "A senha atual digitada não confere";
+                }
+                if (txtPassword.Text != txtRPassword.Text)
+                {
+                    this.msgerro.Visible = true;
+                    this.msgerro.Text = "As senhas digitadas não conferem";
+                }
+
+                bllCliente.AlterarCliente(dtoCliente);
+            }
+            catch (Exception ex)
+            {
+                msgerro.Visible = true;
+                msgerro.Text = ex.Message;
+            }
+
+
         }
     }
 }

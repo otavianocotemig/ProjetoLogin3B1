@@ -14,26 +14,25 @@
           <div class="jumbotron">
                <h1 class="h3 mb-3 font-weight-normal">Meu Perfil</h1>
              <br />
+             <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
+             <br />
              <asp:Label  runat="server" Text="Nome"></asp:Label>
              <asp:TextBox  class="form-control" ID="txtnomeCliente" runat="server"></asp:TextBox>
-              
-             <br />
-              <asp:Label  runat="server" Text="SobreNome"></asp:Label>
+             <asp:Label  runat="server" Text="SobreNome"></asp:Label>
              <asp:TextBox  class="form-control" ID="txtsobreNomeCliente" runat="server"></asp:TextBox>
+             <asp:Label  runat="server" Text="CPF"></asp:Label>
+             <asp:TextBox  class="form-control" ID="txtcpf" runat="server"></asp:TextBox>
              <br />
-            
+
              <asp:Label ID="Label2"  runat="server" Text="Senha Atual"></asp:Label>
              <asp:TextBox type="password" class="form-control" ID="txtSenhaAtual" runat="server"></asp:TextBox>
-             <br />
-                                     
-              <asp:Label ID="lblPassword"  runat="server" Text="Nova Senha"></asp:Label>
+             <asp:Label ID="lblPassword"  runat="server" Text="Nova Senha"></asp:Label>
              <asp:TextBox type="password" class="form-control" ID="txtPassword" runat="server"></asp:TextBox>
-             <br />
              <asp:Label ID="Label1"  runat="server" Text="Repita a Nova Senha"></asp:Label>
              <asp:TextBox type="password" class="form-control" ID="txtRPassword" runat="server"></asp:TextBox>
               
             <br />
-            <asp:Button ID="btnEntrar" Class="btn btn-lg btn-primary btn-block" runat="server"  Text="Gravar"  />
+            <asp:Button ID="btnEntrar" Class="btn btn-lg btn-primary btn-block" runat="server"  Text="Gravar" OnClick="btnEntrar_Click"  />
             <asp:Button ID="btnRetornar" Class="btn btn-lg btn-primary btn-block" runat="server"  Text="Retornar" OnClick="btnRetornar_Click"  />
 
             <br />

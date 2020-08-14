@@ -24,6 +24,15 @@ namespace ProjetoLogin3B1.UI
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Controle msgerro.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label msgerro;
+
+        /// <summary>
         /// Controle txtnomeCliente.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace ProjetoLogin3B1.UI
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtsobreNomeCliente;
+
+        /// <summary>
+        /// Controle txtcpf.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtcpf;
 
         /// <summary>
         /// Controle Label2.

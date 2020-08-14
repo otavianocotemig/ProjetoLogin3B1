@@ -12,10 +12,7 @@ namespace ProjetoLogin3B1.DTO
 
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
         public int Tp_usuario { get => tp_usuario; set => tp_usuario = value; }
-        public string Nome_cliente { get => nome_cliente; set => nome_cliente = value; }
-        public string Sobrenome_cliente { get => sobrenome_cliente; set => sobrenome_cliente = value; }
-        public string Cpf_cliente { get => cpf_cliente; set => cpf_cliente = value; }
-
+    
         // tratamento de exceção para controle e validação dos campos email e senha
       
         public string Email_cliente
@@ -50,9 +47,53 @@ namespace ProjetoLogin3B1.DTO
             get { return this.senha_cliente; }
         }
 
+        public string Nome_cliente
+        {
+            set
+            {
+                if (value != string.Empty)
+                {
+                    this.nome_cliente = value;
+                }
+                else
+                {
+                    throw new Exception("O campo Nome é obrigatório.");
+                }
+            }
+            get { return this.nome_cliente; }
+        }
 
+        public string Sobrenome_cliente
+        {
+            set
+            {
+                if (value != string.Empty)
+                {
+                    this.sobrenome_cliente = value;
+                }
+                else
+                {
+                    throw new Exception("O campo Sobrenome é obrigatório.");
+                }
+            }
+            get { return this.sobrenome_cliente; }
+        }
 
-
+        public string Cpf_cliente
+        {
+            set
+            {
+                if (value != string.Empty)
+                {
+                    this.cpf_cliente = value;
+                }
+                else
+                {
+                    throw new Exception("O campo CPF é obrigatório.");
+                }
+            }
+            get { return this.cpf_cliente; }
+        }
 
     }
 }

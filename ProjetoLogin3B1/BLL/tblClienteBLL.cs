@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Web;
 using ProjetoLogin3B1.DAL;
-
+using ProjetoLogin3B1.DTO;
 
 namespace ProjetoLogin3B1.BLL
 {
@@ -42,7 +42,6 @@ namespace ProjetoLogin3B1.BLL
                 return "Usuário não Localizado.";
             }
 
-
         }
 
         public string RecuperarTipoUsuario(string email)
@@ -71,6 +70,17 @@ namespace ProjetoLogin3B1.BLL
         {
             string sql = string.Format($@"select * from tbl_cliente");
             return daoBanco.ExecutarConsulta(sql);
+        }
+
+        public void AlterarCliente(tblClienteDTO dtoCliente)
+        {
+            string sql = string.Format($@"UPDATE tbl_cliente set nome_cliente = '{dtoCliente.Nome_cliente}',
+                                                                 sobrenome_cliente = '{dtoCliente.Sobrenome_cliente}',
+                                                                 cpf_cliente = '{dtoCliente.Cpf_cliente}',
+                                                                 senha_cliente = '{dtoCliente.Senha_cliente}'
+                                                  where email_cliente = '{dtoCliente.Email_cliente}';");
+            daoBanco.executarComando(sql);
+
         }
     }
 }
