@@ -32,5 +32,10 @@ namespace ProjetoLogin3B1.UI
         {
             Response.Redirect("FrmMeuPerfil.aspx");
         }
+
+        protected void btnAdministracao_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmConsultarClientes.aspx");
+        }
     }
 }

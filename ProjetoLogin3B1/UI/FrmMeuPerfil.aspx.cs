@@ -57,7 +57,7 @@ namespace ProjetoLogin3B1.UI
                     this.msgerro.Visible = true;
                     this.msgerro.Text = "As senhas digitadas não conferem";
                 }
-
+                // Chamada do metodo para alterar o cliente
                 bllCliente.AlterarCliente(dtoCliente);
             }
             catch (Exception ex)

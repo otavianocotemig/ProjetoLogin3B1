@@ -71,6 +71,12 @@ namespace ProjetoLogin3B1.BLL
             string sql = string.Format($@"select * from tbl_cliente");
             return daoBanco.ExecutarConsulta(sql);
         }
+        // Metodo para Pesquisar Clientes no banco de dados - Por Nome - Por Sobrenome - Por Email
+        public DataTable PesquisarClientes(string condicao)
+        {
+            string sql = string.Format($@"select * from tbl_cliente where " + condicao);
+            return daoBanco.ExecutarConsulta(sql);
+        }
 
         public void AlterarCliente(tblClienteDTO dtoCliente)
         {

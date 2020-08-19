@@ -12,7 +12,7 @@ namespace ProjetoLogin3B1.DTO
 
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
         public int Tp_usuario { get => tp_usuario; set => tp_usuario = value; }
-    
+   
         // tratamento de exceção para controle e validação dos campos email e senha
       
         public string Email_cliente
