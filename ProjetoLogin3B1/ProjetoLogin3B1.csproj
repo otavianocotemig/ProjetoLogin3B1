@@ -178,7 +178,9 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="UI\FrmClientes.aspx" />
     <Content Include="UI\FrmConsultarClientes.aspx" />
+    <Content Include="UI\FrmConsultarFornecedores.aspx" />
     <Content Include="UI\FrmMain.aspx" />
     <Content Include="UI\FrmMeuPerfil.aspx" />
     <Content Include="UI\signIn.aspx" />
@@ -186,18 +188,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\tblClienteBLL.cs" />
+    <Compile Include="BLL\tblFornecedorBLL.cs" />
+    <Compile Include="BLL\tblTipousuarioBLL.cs" />
     <Compile Include="DAL\DALMysql.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
+    <Compile Include="DTO\tblFornecedorDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\FrmClientes.aspx.cs">
+      <DependentUpon>FrmClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FrmClientes.aspx.designer.cs">
+      <DependentUpon>FrmClientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmConsultarClientes.aspx.cs">
       <DependentUpon>FrmConsultarClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\FrmConsultarClientes.aspx.designer.cs">
       <DependentUpon>FrmConsultarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmConsultarFornecedores.aspx.cs">
+      <DependentUpon>FrmConsultarFornecedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FrmConsultarFornecedores.aspx.designer.cs">
+      <DependentUpon>FrmConsultarFornecedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmMain.aspx.cs">
       <DependentUpon>FrmMain.aspx</DependentUpon>

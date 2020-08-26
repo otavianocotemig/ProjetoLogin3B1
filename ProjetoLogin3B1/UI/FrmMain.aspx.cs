@@ -14,7 +14,7 @@ namespace ProjetoLogin3B1.UI
             if (Session["emailUsuario"] != null)
             {
                 this.emailUsuario.Text = Session["emailUsuario"].ToString();
-                if (Session["tipoUsuario"].ToString() == "1")
+                if (Session["tipoUsuario"].ToString() == "2")
                 {
                     this.btnAdministracao.Visible = false;
                 }
@@ -36,6 +36,16 @@ namespace ProjetoLogin3B1.UI
         protected void btnAdministracao_Click(object sender, EventArgs e)
         {
             Response.Redirect("FrmConsultarClientes.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmConsultarFornecedores.aspx");
+        }
+
+        protected void btnClientes_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmClientes.aspx");
         }
     }
 }

@@ -53,7 +53,9 @@
             <br />
            <div class="jumbotron">
                <p><asp:Button ID="btnMeuPerfil"  class="btn btn-primary btn-lg" runat="server" Text="Meu Perfil" OnClick="btnMeuPerfil_Click" />
-               <asp:Button ID="btnAdministracao"  class="btn btn-primary btn-lg" runat="server" Text="Administração" OnClick="btnAdministracao_Click" /></p>
+               <asp:Button ID="btnAdministracao"  class="btn btn-primary btn-lg" runat="server" Text="Consulta Clientes" OnClick="btnAdministracao_Click" />
+               <asp:Button ID="btnConsultaFornecedor"  class="btn btn-primary btn-lg" runat="server" Text="Consulta Fornecedor" OnClick="Button1_Click"  />
+               <asp:Button ID="btnClientes"  class="btn btn-primary btn-lg" runat="server" Text="Clientes" OnClick="btnClientes_Click"  /></p>
                       
     
            </div>

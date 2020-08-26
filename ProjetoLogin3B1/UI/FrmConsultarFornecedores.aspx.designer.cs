@@ -11,7 +11,7 @@ namespace ProjetoLogin3B1.UI
 {
 
 
-    public partial class FrmMain
+    public partial class FrmConsultarFornecedores
     {
 
         /// <summary>
@@ -24,48 +24,39 @@ namespace ProjetoLogin3B1.UI
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle emailUsuario.
+        /// Controle txtPesquisar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label emailUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtPesquisar;
 
         /// <summary>
-        /// Controle btnMeuPerfil.
+        /// Controle btnPesquisar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMeuPerfil;
+        protected global::System.Web.UI.WebControls.Button btnPesquisar;
 
         /// <summary>
-        /// Controle btnAdministracao.
+        /// Controle btnVoltar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAdministracao;
+        protected global::System.Web.UI.WebControls.Button btnVoltar;
 
         /// <summary>
-        /// Controle btnConsultaFornecedor.
+        /// Controle GridFornecedores.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConsultaFornecedor;
-
-        /// <summary>
-        /// Controle btnClientes.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClientes;
+        protected global::System.Web.UI.WebControls.GridView GridFornecedores;
     }
 }

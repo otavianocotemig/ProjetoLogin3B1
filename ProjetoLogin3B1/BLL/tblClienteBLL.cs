@@ -77,7 +77,7 @@ namespace ProjetoLogin3B1.BLL
             string sql = string.Format($@"select * from tbl_cliente where " + condicao);
             return daoBanco.ExecutarConsulta(sql);
         }
-
+        // Para alterar o cliente
         public void AlterarCliente(tblClienteDTO dtoCliente)
         {
             string sql = string.Format($@"UPDATE tbl_cliente set nome_cliente = '{dtoCliente.Nome_cliente}',
@@ -88,5 +88,19 @@ namespace ProjetoLogin3B1.BLL
             daoBanco.executarComando(sql);
 
         }
+        // Metodo para Inserir o cliente na tabela
+        public void InserirCliente(tblClienteDTO dtocliente)
+        {
+            string sql = string.Format($@"INSERT INTO tbl_cliente VALUES (NULL, '{dtocliente.Nome_cliente}',
+                                                                               '{dtocliente.Sobrenome_cliente}', 
+                                                                               '{dtocliente.Email_cliente}',
+                                                                                '{dtocliente.Senha_cliente}',
+                                                                                '{dtocliente.Cpf_cliente}',
+                                                                                '{dtocliente.Tp_usuario}');");
+            daoBanco.executarComando(sql);
+
+        }
+
+
     }
 }

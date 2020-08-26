@@ -21,7 +21,7 @@ namespace ProjetoLogin3B1.UI
             if (Session["emailUsuario"] != null)
             {
 
-                if (Session["tipoUsuario"].ToString() == "1")
+                if (Session["tipoUsuario"].ToString() == "2")
                 {
                     Response.Redirect("FrmMain.Aspx");
                 }
