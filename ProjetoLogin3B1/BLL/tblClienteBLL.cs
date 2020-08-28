@@ -100,7 +100,12 @@ namespace ProjetoLogin3B1.BLL
             daoBanco.executarComando(sql);
 
         }
-
+        // Metodo para excluir Cliente
+        public void ExcluirCliente(tblClienteDTO dtocliente)
+        {
+            string sql = string.Format($@"DELETE FROM tbl_cliente where id_cliente = {dtocliente.Id_cliente};");
+            daoBanco.executarComando(sql);
+        }
 
     }
 }

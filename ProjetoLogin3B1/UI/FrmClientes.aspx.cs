@@ -21,15 +21,23 @@ namespace ProjetoLogin3B1.UI
             if (IsPostBack == false)
             {
                 this.PreencheTipoUsuario();
+                this.ExibirGrid();
             }
             
-        }
 
+            
+        }
         protected void btnRetornar_Click(object sender, EventArgs e)
         {
             Response.Redirect("FrmMain.aspx");
         }
-
+        // Metodo utilizado para exibir Grid
+        public void ExibirGrid()
+        {
+            GridClientes.DataSource = bllCliente.ListarClientes();
+            GridClientes.DataBind();
+        }
+        // Metodo Utilizando para Preenher DropDownList do Tipo do Usuario
         public void PreencheTipoUsuario()
         {
             drpTipoUsuario.DataSource = bllTipousuario.ListarTipoUsuario();
@@ -53,12 +61,69 @@ namespace ProjetoLogin3B1.UI
                 bllCliente.InserirCliente(dtoCliente);
                 msgerro.Visible = true;
                 msgerro.Text = "Cliente inserido com sucesso";
+                this.LimparCampos();
             }
             catch (Exception ex)
             {
                 msgerro.Visible = true;
                 msgerro.Text = ex.Message;
             }
+        }
+
+        // metodo para limpar campos do formulario
+        public void LimparCampos()
+        {
+            txtNome.Text = "";
+            txtSobreNome.Text = "";
+            txtCpf.Text = "";
+            txtSenha.Text = "";
+            txtEmail.Text = "";
+        }
+
+        protected void GridClientes_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                dtoCliente.Id_cliente = Convert.ToInt32(e.Values[0]);
+                bllCliente.ExcluirCliente(dtoCliente);
+                this.ExibirGrid();
+            }
+            catch (Exception ex)
+            {
+                msgerro.Visible = true;
+                msgerro.Text = ex.Message;
+            }
+        }
+
+        protected void GridClientes_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridClientes.EditIndex = e.NewEditIndex;
+            ExibirGrid();
+        }
+
+        protected void GridClientes_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            try
+            {
+                dtoCliente.Nome_cliente = e.NewValues[1].ToString();
+                dtoCliente.Sobrenome_cliente = e.NewValues[2].ToString();
+                dtoCliente.Senha_cliente = e.NewValues[4].ToString();
+                dtoCliente.Cpf_cliente = e.NewValues[5].ToString();
+                dtoCliente.Email_cliente = e.NewValues[3].ToString();
+                bllCliente.AlterarCliente(dtoCliente);
+                ExibirGrid();
+            }
+            catch (Exception ex)
+            {
+                msgerro.Visible = true;
+                msgerro.Text = ex.Message;
+            }
+        }
+
+        protected void GridClientes_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            GridClientes.EditIndex = -1;
+            ExibirGrid();
         }
     }
 }

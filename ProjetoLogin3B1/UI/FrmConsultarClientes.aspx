@@ -18,7 +18,8 @@
                <asp:Button ID="btnPesquisar" runat="server" OnClick="btnPesquisar_Click" Text="Pesquisar" />
                <asp:Button ID="btnVoltar" runat="server" OnClick="btnVoltar_Click" Text="Voltar" />
                <br />
-               <asp:GridView ID="GridClientes" runat="server">
+               <asp:GridView ID="GridClientes"  CssClass="table table-striped" runat="server">
+                  
                </asp:GridView>
 
         </div>

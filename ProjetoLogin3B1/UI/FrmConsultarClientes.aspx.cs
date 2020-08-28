@@ -54,5 +54,11 @@ namespace ProjetoLogin3B1.UI
             GridClientes.DataBind();
 
         }
+
+       
+        protected void GridClientes_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
     }
 }

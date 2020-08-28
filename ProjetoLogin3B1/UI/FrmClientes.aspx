@@ -38,7 +38,14 @@
             <br />
             <asp:Button ID="btnInserir" Class="btn btn-lg btn-primary" runat="server"  Text="Gravar" OnClick="btnInserir_Click"  />
             <asp:Button ID="btnRetornar" Class="btn btn-lg btn-primary" runat="server"  Text="Retornar" OnClick="btnRetornar_Click"  />
+                  
+            <asp:GridView ID="GridClientes"  CssClass="table table-striped" runat="server" OnRowDeleting="GridClientes_RowDeleting" OnRowCancelingEdit="GridClientes_RowCancelingEdit" OnRowEditing="GridClientes_RowEditing" OnRowUpdating="GridClientes_RowUpdating">
+                 <Columns>
+                     <asp:CommandField HeaderText="Alterar" ShowEditButton="true" />
+                     <asp:CommandField HeaderText="Excluir" ShowDeleteButton="true" />
 
+                 </Columns> 
+            </asp:GridView>
             <br />
         </div>
 
