@@ -62,6 +62,7 @@ namespace ProjetoLogin3B1.UI
                 msgerro.Visible = true;
                 msgerro.Text = "Cliente inserido com sucesso";
                 this.LimparCampos();
+                this.ExibirGrid();
             }
             catch (Exception ex)
             {
@@ -111,6 +112,7 @@ namespace ProjetoLogin3B1.UI
                 dtoCliente.Cpf_cliente = e.NewValues[5].ToString();
                 dtoCliente.Email_cliente = e.NewValues[3].ToString();
                 bllCliente.AlterarCliente(dtoCliente);
+                GridClientes.EditIndex = -1;
                 ExibirGrid();
             }
             catch (Exception ex)
@@ -123,6 +125,18 @@ namespace ProjetoLogin3B1.UI
         protected void GridClientes_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridClientes.EditIndex = -1;
+            ExibirGrid();
+        }
+
+        protected void GridClientes_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+           
+
+        }
+
+        protected void GridClientes_PageIndexChanging1(object sender, GridViewPageEventArgs e)
+        {
+            GridClientes.PageIndex = e.NewPageIndex;
             ExibirGrid();
         }
     }

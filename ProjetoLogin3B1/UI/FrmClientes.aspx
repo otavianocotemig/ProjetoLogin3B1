@@ -11,11 +11,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
+ <div class="container">
   <div class="jumbotron">
                <h1 class="h3 mb-3 font-weight-normal">Clientes</h1>
-             <br />
-             <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
+              <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
              <br />
              <asp:Label  runat="server" Text="Nome"></asp:Label>
              <asp:TextBox  class="form-control" ID="txtNome" runat="server"></asp:TextBox>
@@ -35,16 +34,18 @@
              <asp:Label ID="Label1"  runat="server" Text="Tipo Usuario"></asp:Label>
              <asp:DropDownList ID="drpTipoUsuario" runat="server" class="form-control"></asp:DropDownList>
 
-            <br />
             <asp:Button ID="btnInserir" Class="btn btn-lg btn-primary" runat="server"  Text="Gravar" OnClick="btnInserir_Click"  />
             <asp:Button ID="btnRetornar" Class="btn btn-lg btn-primary" runat="server"  Text="Retornar" OnClick="btnRetornar_Click"  />
-                  
-            <asp:GridView ID="GridClientes"  CssClass="table table-striped" runat="server" OnRowDeleting="GridClientes_RowDeleting" OnRowCancelingEdit="GridClientes_RowCancelingEdit" OnRowEditing="GridClientes_RowEditing" OnRowUpdating="GridClientes_RowUpdating">
+             </div>       
+            <asp:GridView ID="GridClientes"  CssClass="table table-striped" runat="server" OnRowDeleting="GridClientes_RowDeleting" OnRowCancelingEdit="GridClientes_RowCancelingEdit" OnRowEditing="GridClientes_RowEditing" OnRowUpdating="GridClientes_RowUpdating" OnPageIndexChanging="GridClientes_PageIndexChanging1" PageSize="5" AllowPaging="True">
                  <Columns>
                      <asp:CommandField HeaderText="Alterar" ShowEditButton="true" />
                      <asp:CommandField HeaderText="Excluir" ShowDeleteButton="true" />
 
                  </Columns> 
+                          
+                 <PagerSettings PageButtonCount="5" Position="TopAndBottom" Mode="NumericFirstLast" />
+                          
             </asp:GridView>
             <br />
         </div>
