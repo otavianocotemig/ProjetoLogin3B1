@@ -183,16 +183,19 @@
     <Content Include="UI\FrmConsultarFornecedores.aspx" />
     <Content Include="UI\FrmMain.aspx" />
     <Content Include="UI\FrmMeuPerfil.aspx" />
+    <Content Include="UI\FrmProdutos.aspx" />
     <Content Include="UI\signIn.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\tblClienteBLL.cs" />
     <Compile Include="BLL\tblFornecedorBLL.cs" />
+    <Compile Include="BLL\tblProdutoBLL.cs" />
     <Compile Include="BLL\tblTipousuarioBLL.cs" />
     <Compile Include="DAL\DALMysql.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="DTO\tblFornecedorDTO.cs" />
+    <Compile Include="DTO\tblProdutoDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,6 +234,13 @@
     </Compile>
     <Compile Include="UI\FrmMeuPerfil.aspx.designer.cs">
       <DependentUpon>FrmMeuPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmProdutos.aspx.cs">
+      <DependentUpon>FrmProdutos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FrmProdutos.aspx.designer.cs">
+      <DependentUpon>FrmProdutos.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\signIn.aspx.cs">
       <DependentUpon>signIn.aspx</DependentUpon>

@@ -55,7 +55,8 @@
                <p><asp:Button ID="btnMeuPerfil"  class="btn btn-primary btn-lg" runat="server" Text="Meu Perfil" OnClick="btnMeuPerfil_Click" />
                <asp:Button ID="btnAdministracao"  class="btn btn-primary btn-lg" runat="server" Text="Consulta Clientes" OnClick="btnAdministracao_Click" />
                <asp:Button ID="btnConsultaFornecedor"  class="btn btn-primary btn-lg" runat="server" Text="Consulta Fornecedor" OnClick="Button1_Click"  />
-               <asp:Button ID="btnClientes"  class="btn btn-primary btn-lg" runat="server" Text="Clientes" OnClick="btnClientes_Click"  /></p>
+               <asp:Button ID="btnClientes"  class="btn btn-primary btn-lg" runat="server" Text="Clientes" OnClick="btnClientes_Click"  />
+               <asp:Button ID="btnProdutos"  class="btn btn-primary btn-lg" runat="server" Text="Produtos" OnClick="btnProdutos_Click"  /></p>
                       
     
            </div>

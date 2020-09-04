@@ -47,5 +47,10 @@ namespace ProjetoLogin3B1.UI
         {
             Response.Redirect("FrmClientes.aspx");
         }
+
+        protected void btnProdutos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmProdutos.aspx");
+        }
     }
 }
