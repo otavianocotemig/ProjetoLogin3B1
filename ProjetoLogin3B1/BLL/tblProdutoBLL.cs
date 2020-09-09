@@ -23,5 +23,6 @@ namespace ProjetoLogin3B1.BLL
             string sql = string.Format($@"DELETE FROM tbl_produto where id = {dtoProduto.Id};");
             daoBanco.executarComando(sql);
         }
+
     }
 }

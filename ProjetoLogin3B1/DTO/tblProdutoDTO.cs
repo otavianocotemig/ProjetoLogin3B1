@@ -13,7 +13,6 @@ namespace ProjetoLogin3B1.DTO
         private Double preco, peso;
 
         public int Id { get => id; set => id = value; }
-        public int Tbl_categoria_id { get => tbl_categoria_id; set => tbl_categoria_id = value; }
         public int Tbl_fornecedor_id { get => tbl_fornecedor_id; set => tbl_fornecedor_id = value; }
         public string Descricao { get => descricao; set => descricao = value; }
         public double Preco { get => preco; set => preco = value; }
@@ -49,5 +48,23 @@ namespace ProjetoLogin3B1.DTO
             }
             get { return this.quantidade; }
         }
+
+        public int Tbl_categoria_id
+        {
+            set
+            {
+                if (value != 0)
+                {
+                    this.tbl_categoria_id = value;
+                }
+                else
+                {
+                    throw new Exception("O campo Categoria  do Produto é obrigatório.");
+                }
+            }
+            get { return this.tbl_categoria_id; }
+        }
+
+      
     }
 }
