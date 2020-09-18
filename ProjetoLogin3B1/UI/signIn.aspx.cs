@@ -72,5 +72,10 @@ namespace ProjetoLogin3B1.UI
 
 
 }
+
+        protected void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmCadCliente.aspx");
+        }
     }
 }

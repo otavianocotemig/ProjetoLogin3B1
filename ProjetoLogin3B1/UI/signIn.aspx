@@ -32,7 +32,7 @@
             <asp:Button ID="btnEntrar" Class="btn btn-lg btn-primary btn-block" runat="server" OnClick="Button1_Click" Text="Entrar"  />
 
             <br />
-            <asp:LinkButton ID="btnCadastrar" class="btn btn-link"  runat="server">Não sou Cadastrado. Clique aqui</asp:LinkButton>
+            <asp:LinkButton ID="btnCadastrar" class="btn btn-link"  runat="server" OnClick="btnCadastrar_Click">Não sou Cadastrado. Clique aqui</asp:LinkButton>
             <asp:LinkButton ID="btnEsqueciSenha" class="btn btn-link"  runat="server" OnClick="btnEsqueciSenha_Click">Esqueci Minha Senha</asp:LinkButton>
 
         </div>

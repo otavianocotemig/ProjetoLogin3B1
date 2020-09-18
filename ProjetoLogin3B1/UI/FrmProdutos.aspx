@@ -20,17 +20,22 @@
            <p>
                <asp:TextBox ID="txtPesquisar" class="form-control" runat="server"></asp:TextBox>
                <asp:Button ID="btnPesquisar" Class="btn btn-lg btn-primary" runat="server"  Text="Pesquisar" OnClick="btnPesquisar_Click" />
-               <asp:Button ID="btnNovo" Class="btn btn-lg btn-primary" runat="server"  Text="Novo Produto"  /> 
+               <asp:Button ID="btnNovo" Class="btn btn-lg btn-primary" runat="server"  Text="Novo Produto" OnClick="btnNovo_Click"  /> 
                <asp:Button ID="btnVoltar" Class="btn btn-lg btn-primary" runat="server"  Text="Voltar" OnClick="btnVoltar_Click" />
                </p>
                
-           <asp:GridView ID="GridProdutos" CssClass="table-responsive-sm" runat="server" AllowPaging="True" OnPageIndexChanging="GridProdutos_PageIndexChanging" OnRowDeleting="GridProdutos_RowDeleting" PageSize="5">
+           <asp:GridView ID="GridProdutos" CssClass="table-responsive-sm" runat="server" AllowPaging="True" OnPageIndexChanging="GridProdutos_PageIndexChanging" OnRowDeleting="GridProdutos_RowDeleting" PageSize="10">
                <Columns>
                    <asp:CommandField ShowDeleteButton="True" />
-                   <asp:CommandField ShowSelectButton="True" />
+                   <asp:TemplateField>
+                       <ItemTemplate>
+                           <a href='FrmManProdutos.aspx?idProduto=<%# Eval("id") %>'> Alterar</a>
+                       </ItemTemplate>
+
+                   </asp:TemplateField>
                </Columns>
                   
-               <PagerSettings PageButtonCount="5" Position="TopAndBottom" />
+               <PagerSettings PageButtonCount="10" Position="TopAndBottom" />
                   
             </asp:GridView>
 
