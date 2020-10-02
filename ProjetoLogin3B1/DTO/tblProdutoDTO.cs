@@ -9,7 +9,7 @@ namespace ProjetoLogin3B1.DTO
     {
 
         private int id, tbl_categoria_id, tbl_fornecedor_id, quantidade;
-        private String nomeProduto, descricao;
+        private String nomeProduto, descricao, foto;
         private Double preco, peso;
 
         public int Id { get => id; set => id = value; }
@@ -17,6 +17,7 @@ namespace ProjetoLogin3B1.DTO
         public string Descricao { get => descricao; set => descricao = value; }
         public double Preco { get => preco; set => preco = value; }
         public double Peso { get => peso; set => peso = value; }
+        public string Foto { get => foto; set => foto = value; }
 
         public string NomeProduto
         {

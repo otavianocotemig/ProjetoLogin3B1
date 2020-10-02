@@ -14,7 +14,7 @@ namespace ProjetoLogin3B1.BLL
         // Pesquisar Produtos
         public DataTable PesquisarProdutos(string condicao)
         {
-            string sql = string.Format($@"select p.id , p.nomeProduto, p.descricao, p.preco, p.quantidade, c.descricao as Categoria, f.nome as Fornecedor from tbl_produto p, tbl_categoria c, tbl_fornecedor f where p.tbl_categoria_id=c.id and p.tbl_fornecedor_id = f.id and " + condicao +" order by Id");
+            string sql = string.Format($@"select p.id , p.nomeProduto, p.descricao, p.preco, p.quantidade, c.descricao as Categoria, f.nome as Fornecedor, p.foto from tbl_produto p, tbl_categoria c, tbl_fornecedor f where p.tbl_categoria_id=c.id and p.tbl_fornecedor_id = f.id and " + condicao +" order by Id");
             return daoBanco.ExecutarConsulta(sql);
         }
         // Metodo para Excluir Produto
@@ -32,7 +32,8 @@ namespace ProjetoLogin3B1.BLL
                                                                                '{dtoProduto.Quantidade}',
                                                                                '{dtoProduto.Peso}',
                                                                                '{dtoProduto.Tbl_categoria_id}',
-                                                                               '{dtoProduto.Tbl_fornecedor_id}');");
+                                                                               '{dtoProduto.Tbl_fornecedor_id}',
+                                                                               '{dtoProduto.Foto}' );");
 
             daoBanco.executarComando(sql);
 
@@ -52,7 +53,8 @@ namespace ProjetoLogin3B1.BLL
                                                                  quantidade = '{dtoProduto.Quantidade}',
                                                                  peso = '{dtoProduto.Peso}',
                                                                  tbl_categoria_id = '{dtoProduto.Tbl_categoria_id}',
-                                                                 tbl_fornecedor_id  = '{dtoProduto.Tbl_fornecedor_id}'
+                                                                 tbl_fornecedor_id  = '{dtoProduto.Tbl_fornecedor_id}',
+                                                                 foto =  '{dtoProduto.Foto}'
                                                   where id = '{dtoProduto.Id}';");
             daoBanco.executarComando(sql);
 

@@ -44,6 +44,7 @@ namespace ProjetoLogin3B1.UI
                         txtPeso.Text = cursor.Rows[0][5].ToString();
                         drpCategoria.SelectedValue = cursor.Rows[0][6].ToString();
                         drpFornecedor.SelectedValue = cursor.Rows[0][7].ToString();
+                        imgproduto.ImageUrl = "~//imgProdutos//" + cursor.Rows[0][8].ToString();
                     }
                     this.btnGravar.Text = "Alterar";
                 }
@@ -81,6 +82,7 @@ namespace ProjetoLogin3B1.UI
                 produtoDTO.Peso = double.Parse(txtPeso.Text);
                 produtoDTO.Tbl_categoria_id = int.Parse(drpCategoria.SelectedValue.ToString());
                 produtoDTO.Tbl_fornecedor_id = int.Parse(drpFornecedor.SelectedValue.ToString());
+                produtoDTO.Foto = FotoProduto.FileName.ToString();
 
                 if (btnGravar.Text == "Inserir")
                 {
@@ -92,6 +94,11 @@ namespace ProjetoLogin3B1.UI
                     produtoDTO.Id = int.Parse(txtId.Text);
                     produtoBLL.AlterarProduto(produtoDTO);
                 }
+                // Upload da Imagem para o servidor
+
+                String localImagem = Server.MapPath("\\imgProdutos\\" + FotoProduto.FileName);
+                FotoProduto.SaveAs(localImagem);
+
                 Response.Redirect("/UI/FrmProdutos.aspx");
 
 
