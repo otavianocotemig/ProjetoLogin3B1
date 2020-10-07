@@ -83,7 +83,9 @@ namespace ProjetoLogin3B1.BLL
             string sql = string.Format($@"UPDATE tbl_cliente set nome_cliente = '{dtoCliente.Nome_cliente}',
                                                                  sobrenome_cliente = '{dtoCliente.Sobrenome_cliente}',
                                                                  cpf_cliente = '{dtoCliente.Cpf_cliente}',
-                                                                 senha_cliente = '{dtoCliente.Senha_cliente}'
+                                                                 senha_cliente = '{dtoCliente.Senha_cliente}',
+                                                                 cep = '{dtoCliente.Cep}',
+                                                                 endereco = '{dtoCliente.Endereco}'
                                                   where email_cliente = '{dtoCliente.Email_cliente}';");
             daoBanco.executarComando(sql);
 
@@ -96,7 +98,9 @@ namespace ProjetoLogin3B1.BLL
                                                                                '{dtocliente.Email_cliente}',
                                                                                 '{dtocliente.Senha_cliente}',
                                                                                 '{dtocliente.Cpf_cliente}',
-                                                                                '{dtocliente.Tp_usuario}');");
+                                                                                '{dtocliente.Tp_usuario}',
+                                                                                 '{dtocliente.Cep}', 
+                                                                                  '{dtocliente.Endereco}'  );");
             daoBanco.executarComando(sql);
 
         }

@@ -34,6 +34,13 @@
              <asp:Label ID="Label1"  runat="server" Text="Tipo Usuario"></asp:Label>
              <asp:DropDownList ID="drpTipoUsuario" runat="server" class="form-control"></asp:DropDownList>
 
+              <asp:Label ID="Label3"  runat="server" Text="CEP"></asp:Label>
+              <asp:Button ID="btnConsultarCep" Class="btn btn-lg btn-primary" runat="server"  Text="Consultar CEP" OnClick="btnConsultarCep_Click"   />
+              <asp:TextBox  class="form-control" ID="txtCep" runat="server"></asp:TextBox>
+
+              <asp:Label ID="Label4"  runat="server" Text="Endereço"></asp:Label>  
+              <asp:TextBox  class="form-control" ID="txtEndereco" runat="server"></asp:TextBox>
+
             <asp:Button ID="btnInserir" Class="btn btn-lg btn-primary" runat="server"  Text="Gravar" OnClick="btnInserir_Click"  />
             <asp:Button ID="btnRetornar" Class="btn btn-lg btn-primary" runat="server"  Text="Retornar" OnClick="btnRetornar_Click"  />
              </div>       

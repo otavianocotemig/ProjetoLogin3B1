@@ -8,13 +8,16 @@ namespace ProjetoLogin3B1.DTO
     public class tblClienteDTO
     {
         private int id_cliente, tp_usuario;
-        private string nome_cliente, sobrenome_cliente, cpf_cliente, senha_cliente, email_cliente;
+        private string nome_cliente, sobrenome_cliente, cpf_cliente, senha_cliente, email_cliente,cep,endereco;
 
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
         public int Tp_usuario { get => tp_usuario; set => tp_usuario = value; }
-   
+        public string Cep { get => cep; set => cep = value; }
+        public string Endereco { get => endereco; set => endereco = value; }
+
+
         // tratamento de exceção para controle e validação dos campos email e senha
-      
+
         public string Email_cliente
         {
             set

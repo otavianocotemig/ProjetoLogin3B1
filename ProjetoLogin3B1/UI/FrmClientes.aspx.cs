@@ -57,6 +57,8 @@ namespace ProjetoLogin3B1.UI
                 dtoCliente.Senha_cliente = txtSenha.Text;
                 dtoCliente.Email_cliente = txtEmail.Text;
                 dtoCliente.Tp_usuario = int.Parse(drpTipoUsuario.SelectedValue.ToString());
+                dtoCliente.Cep = txtCep.Text;
+                dtoCliente.Endereco = txtEndereco.Text;
                 //
                 bllCliente.InserirCliente(dtoCliente);
                 msgerro.Visible = true;
@@ -138,6 +140,24 @@ namespace ProjetoLogin3B1.UI
         {
             GridClientes.PageIndex = e.NewPageIndex;
             ExibirGrid();
+        }
+
+        protected void btnConsultarCep_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Instanciar a API do Correio
+                var Correios = new WservicesCorreios.AtendeClienteClient();
+                // Executar o metodo da API com Parametros
+                var Retorno = Correios.consultaCEP(txtCep.Text);
+                // Utilizo os parametros
+                txtEndereco.Text = Retorno.end+" - "+ Retorno.bairro+" - "+ Retorno.cidade;
+            }
+            catch (Exception ex)
+            {
+                msgerro.Visible = true;
+                msgerro.Text = ex.Message;
+            }
         }
     }
 }
